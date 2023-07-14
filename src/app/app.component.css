@@ -1,0 +1,16 @@
+.content {
+    max-width: 420px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    align-self: center;
+}
+
+button {
+    width: fit-content;
+    align-self: flex-end;
+}

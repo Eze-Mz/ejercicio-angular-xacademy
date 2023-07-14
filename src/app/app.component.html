@@ -1,0 +1,16 @@
+<div class="content">
+  <h1>Lista de compras</h1>
+  <button mat-raised-button (click)="toggleList()">{{showList ? "Ocultar" : "Mostrar" }}</button>
+
+
+  <div *ngIf="showList">
+    <mat-selection-list #list>
+      <mat-list-option *ngFor="let article of shoppingList">
+        {{ article.nombre }} - {{ article.costo | currency }}
+      </mat-list-option>
+    </mat-selection-list>
+    
+    <p>Faltan {{shoppingList.length - list.selectedOptions.selected.length}} items por comprar</p>
+  </div>
+
+</div>
